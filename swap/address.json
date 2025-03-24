@@ -1,0 +1,11 @@
+{
+   "standalone": {
+      "WETH": "0x7d72459bD06C487Ea572bF7FDF3Bc4e1a23C8049",
+      "factory": "0x5c4242beB94dE30b922f57241f1D02f36e906915",
+      "router": "0xb263096A326c6382c14FfaCBef5e87b305221032",
+      "multicall": "0x24f16Afd05C011169E4a4E426DA8C609834bf1e5",
+      "init_code_hash": "0xcdb5c7a94a3b876fbeb290dd258ac954a243df6f3dc0a6ab2568dc6e8e732ad3",
+      "tok1": "0x7469843a2b39e0De83B7e6b78134D6725AB2E49B",
+      "tok2": "0x56Bd9d617dCE5dCEcd792BB6e4cC22890D6B609d"
+   }
+}
