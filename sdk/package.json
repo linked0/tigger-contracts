@@ -1,0 +1,58 @@
+{
+  "name": "tigger-swap-sdk",
+  "license": "MIT",
+  "version": "1.0.17",
+  "description": "A SDK for building applications on PooSwap.",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/linked0/tigger-swap-sdk.git",
+  "keywords": [
+    "boaswap",
+    "ethereum"
+  ],
+  "module": "dist/sdk.esm.js",
+  "scripts": {
+    "lint": "tsdx lint src test",
+    "build": "tsdx build",
+    "start": "tsdx watch",
+    "test": "tsdx test",
+    "prepublishOnly": "tsdx build"
+  },
+  "dependencies": {
+    "@uniswap/sdk-core": "^3.0.0-alpha.3",
+    "@uniswap/v2-core": "^1.0.0",
+    "big.js": "^5.2.2",
+    "decimal.js-light": "^2.5.0",
+    "dotenv": "^16.4.7",
+    "fs": "^0.0.1-security",
+    "jsbi": "^3.1.1",
+    "path": "^0.12.7",
+    "tiny-invariant": "^1.1.0",
+    "tiny-warning": "^1.0.3",
+    "toformat": "^2.0.0"
+  },
+  "devDependencies": {
+    "@ethersproject/address": "^5.0.2",
+    "@ethersproject/contracts": "^5.0.2",
+    "@ethersproject/networks": "^5.0.2",
+    "@ethersproject/providers": "^5.0.5",
+    "@ethersproject/solidity": "^5.0.2",
+    "@types/big.js": "^4.0.5",
+    "@types/jest": "^24.0.25",
+    "babel-plugin-transform-jsbi-to-bigint": "^1.3.1",
+    "tsdx": "^0.14.1",
+    "tsx": "^4.19.3"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
