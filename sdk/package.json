@@ -19,7 +19,9 @@
     "build": "tsdx build",
     "start": "tsdx watch",
     "test": "tsdx test",
-    "prepublishOnly": "tsdx build"
+    "prepublishOnly": "tsdx build",
+    "get-weth:localnet":"yarn run tsx script/get-weth-localnet.ts",
+    "get-weth:marigold:localnet":"yarn run tsx script/get-weth-marigold-localnet.ts"
   },
   "dependencies": {
     "@uniswap/sdk-core": "^3.0.0-alpha.3",
@@ -43,6 +45,7 @@
     "@types/big.js": "^4.0.5",
     "@types/jest": "^24.0.25",
     "babel-plugin-transform-jsbi-to-bigint": "^1.3.1",
+    "ethers": "^6.13.5",
     "tsdx": "^0.14.1",
     "tsx": "^4.19.3"
   },

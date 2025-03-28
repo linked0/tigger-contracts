@@ -31,6 +31,11 @@ Install dependencies
 yarn install
 ```
 
+Run test for .env files
+```
+yarn tsdx test test/env.test.ts
+```
+
 Run tests
 
 ```sh

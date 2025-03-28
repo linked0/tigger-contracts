@@ -137,4 +137,5 @@ dist
 
 .DS_Store
 .env.marigold.*
+.env.marigold
 .env

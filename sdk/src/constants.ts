@@ -9,8 +9,12 @@ const standalonePath = path.join(__dirname, '../../.env')
 const standaloneEnv = dotenv.config({ path: standalonePath }).parsed || {}
 
 // Load MARIGOLD environment variables separately
-const marigoldPath = path.join(__dirname, '../../.env.marigold.localnet')
+const marigoldPath = path.join(__dirname, '../../.env.marigold')
 const marigoldEnv = dotenv.parse(fs.readFileSync(marigoldPath))
+
+// Load MARIGOLD Localnet environment variables separately
+const mariLocalPath = path.join(__dirname, '../../.env.marigold.localnet')
+const mariLocalEnv = dotenv.parse(fs.readFileSync(mariLocalPath))
 
 // exports for external consumption
 export type BigintIsh = JSBI | bigint | string
@@ -21,6 +25,7 @@ export enum ChainId {
   MAINNET = 1,
   SEPOLIA = 11155111,
   MARIGOLD = 12301,
+  MARIGOLD_LOCALNET = 12309,
   BIZTESTNET = 7212303,
   BIZDEVNET = 7212302,
   BIZNET = 7212301
@@ -85,6 +90,14 @@ export const CONTRACT_ADDRESS_NETWORKS: { [chainId in ChainId]: DeployedContract
     multicall: marigoldEnv.MULTICALL_ADDRESS,
     bridge: marigoldEnv.BOA_TOKEN_BRIDGE,
     tokenBridge: marigoldEnv.TOKEN_BRIDGE
+  },
+  [ChainId.MARIGOLD_LOCALNET]: {
+    WETH: mariLocalEnv.WETH_ADDRESS,
+    factory: mariLocalEnv.FACTORY_ADDRESS,
+    routerv2: mariLocalEnv.ROUTER_ADDRESS,
+    multicall: mariLocalEnv.MULTICALL_ADDRESS,
+    bridge: mariLocalEnv.BOA_TOKEN_BRIDGE,
+    tokenBridge: mariLocalEnv.TOKEN_BRIDGE
   },
   [ChainId.BIZTESTNET]: {
     WETH: '0x0B102b3b321E0D9983907618eC3b685C83a43184',
