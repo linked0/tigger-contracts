@@ -60,8 +60,8 @@ export const WDEV = {
     ChainId.HARDHAT,
     CONTRACT_ADDRESS_NETWORKS[ChainId.HARDHAT].WETH,
     18,
-    'WBOA',
-    'Wrapped BOA'
+    'WETH',
+    'Wrapped Ether'
   ),
   [ChainId.STANDALONE]: new Token(
     ChainId.STANDALONE,
@@ -87,6 +87,13 @@ export const WDEV = {
   [ChainId.MARIGOLD]: new Token(
     ChainId.MARIGOLD,
     CONTRACT_ADDRESS_NETWORKS[ChainId.MARIGOLD].WETH,
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.MARIGOLD_LOCALNET]: new Token(
+    ChainId.MARIGOLD_LOCALNET,
+    CONTRACT_ADDRESS_NETWORKS[ChainId.MARIGOLD_LOCALNET].WETH,
     18,
     'WETH',
     'Wrapped Ether'

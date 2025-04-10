@@ -5,9 +5,29 @@
 [![npm version](https://img.shields.io/npm/v/@uniswap/sdk/latest.svg)](https://www.npmjs.com/package/@uniswap/sdk/v/latest)
 [![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@uniswap/sdk/latest.svg)](https://bundlephobia.com/result?p=@uniswap/sdk@latest)
 
-## Address Modifications
-- BOA_TOKEN_BRIDGE from .env set to `bridge` in ".src/constants.ts"
-- TOKEN_BRIDGE from .env set to `tokenBridge` in ".src/constants.ts"
+## Changes Needed
+
+### Address Modifications
+
+- **BOA_TOKEN_BRIDGE:**  
+  Ensure that the `BOA_TOKEN_BRIDGE` value from your `.env` file is assigned to the `bridge` property in `.src/constants.ts`.
+
+- **TOKEN_BRIDGE:**  
+  Ensure that the `TOKEN_BRIDGE` value from your `.env` file is assigned to the `tokenBridge` property in `.src/constants.ts`.
+
+### Adding the WDEV Constant
+
+When adding a new chain ID (for example, `MARIGOLD_LOCALNET`), make sure to include its corresponding entry in the `WDEV` constant. For instance, add the following item:
+
+```ts
+[ChainId.MARIGOLD_LOCALNET]: new Token(
+  ChainId.MARIGOLD_LOCALNET,
+  CONTRACT_ADDRESS_NETWORKS[ChainId.MARIGOLD_LOCALNET].WETH,
+  18,
+  'WETH',
+  'Wrapped Ether'
+),
+```
 
 ## Running tests
 

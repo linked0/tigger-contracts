@@ -1,14 +1,14 @@
 {
   "name": "tigger-swap-sdk",
   "license": "MIT",
-  "version": "1.0.17",
+  "version": "1.0.19",
   "description": "A SDK for building applications on PooSwap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/linked0/tigger-swap-sdk.git",
+  "repository": "https://github.com/linked0/tigger-swap-contracts.git",
   "keywords": [
     "boaswap",
     "ethereum"

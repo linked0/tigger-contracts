@@ -1,21 +1,5 @@
 import JSBI from 'jsbi'
 
-import path from 'path'
-import fs from 'fs'
-import dotenv from 'dotenv'
-
-// Load base .env for STANDALONE and others
-const standalonePath = path.join(__dirname, '../../.env')
-const standaloneEnv = dotenv.config({ path: standalonePath }).parsed || {}
-
-// Load MARIGOLD environment variables separately
-const marigoldPath = path.join(__dirname, '../../.env.marigold')
-const marigoldEnv = dotenv.parse(fs.readFileSync(marigoldPath))
-
-// Load MARIGOLD Localnet environment variables separately
-const mariLocalPath = path.join(__dirname, '../../.env.marigold.localnet')
-const mariLocalEnv = dotenv.parse(fs.readFileSync(mariLocalPath))
-
 // exports for external consumption
 export type BigintIsh = JSBI | bigint | string
 
@@ -68,12 +52,12 @@ export const CONTRACT_ADDRESS_NETWORKS: { [chainId in ChainId]: DeployedContract
     tokenBridge: '0x95075eDc815e9Cd62Ff6D4598ea922307416B452'
   },
   [ChainId.STANDALONE]: {
-    WETH: standaloneEnv.WETH_ADDRESS,
-    factory: standaloneEnv.FACTORY_ADDRESS,
-    routerv2: standaloneEnv.ROUTER_ADDRESS,
-    multicall: standaloneEnv.MULTICALL_ADDRESS,
-    bridge: standaloneEnv.BOA_TOKEN_BRIDGE,
-    tokenBridge: standaloneEnv.TOKEN_BRIDGE
+    WETH: '0x6804Ee317db22D18190Affee2726868EDDD5a353',
+    factory: '0x7C0A64a1ed25208133A156a395123971B52A20a0',
+    routerv2: '0x37f2Ae6c1C4d638B583462C44C57d13E051960dF',
+    multicall: '0x4848982ecA913D2d9d6235884F4b49e09bBaf974',
+    bridge: '0x99AE6c1F04C5849a48323E69c4836f53b7ADADb3',
+    tokenBridge: '0x3D0f85741850B718929eF54A5F8aAd28F8e75459'
   },
   [ChainId.SEPOLIA]: {
     WETH: '0xA0be228CA989c4225682EbfaF1a372298993bdB9',
@@ -84,20 +68,20 @@ export const CONTRACT_ADDRESS_NETWORKS: { [chainId in ChainId]: DeployedContract
     tokenBridge: '0x95075eDc815e9Cd62Ff6D4598ea922307416B452'
   },
   [ChainId.MARIGOLD]: {
-    WETH: marigoldEnv.WETH_ADDRESS,
-    factory: marigoldEnv.FACTORY_ADDRESS,
-    routerv2: marigoldEnv.ROUTER_ADDRESS,
-    multicall: marigoldEnv.MULTICALL_ADDRESS,
-    bridge: marigoldEnv.BOA_TOKEN_BRIDGE,
-    tokenBridge: marigoldEnv.TOKEN_BRIDGE
+    WETH: '0x9B4ea652EC002AFb0e81Ca508F10fb68e0A16a24',
+    factory: '0x9F59e740df75EDb6116c95BdBb06CD286F9e63Ac',
+    routerv2: '0xfdE6e733C60E144AEDC931dC9e7fCbC442cBa3B9',
+    multicall: '0x4ad5BDa9e450340F384FE4aDB4DC3d3ed76a25a1',
+    bridge: '0x282110DCc33f7Bcd4F3B13e86Ea545F0aECd9818',
+    tokenBridge: '0xaCd2b3064f72125574e9703a2D24CFFF4B1a5899'
   },
   [ChainId.MARIGOLD_LOCALNET]: {
-    WETH: mariLocalEnv.WETH_ADDRESS,
-    factory: mariLocalEnv.FACTORY_ADDRESS,
-    routerv2: mariLocalEnv.ROUTER_ADDRESS,
-    multicall: mariLocalEnv.MULTICALL_ADDRESS,
-    bridge: mariLocalEnv.BOA_TOKEN_BRIDGE,
-    tokenBridge: mariLocalEnv.TOKEN_BRIDGE
+    WETH: '0x9B4ea652EC002AFb0e81Ca508F10fb68e0A16a24',
+    factory: '0x9F59e740df75EDb6116c95BdBb06CD286F9e63Ac',
+    routerv2: '0xfdE6e733C60E144AEDC931dC9e7fCbC442cBa3B9',
+    multicall: '0x4ad5BDa9e450340F384FE4aDB4DC3d3ed76a25a1',
+    bridge: '0x282110DCc33f7Bcd4F3B13e86Ea545F0aECd9818',
+    tokenBridge: '0xaCd2b3064f72125574e9703a2D24CFFF4B1a5899'
   },
   [ChainId.BIZTESTNET]: {
     WETH: '0x0B102b3b321E0D9983907618eC3b685C83a43184',
