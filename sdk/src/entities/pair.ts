@@ -7,7 +7,6 @@ import { getCreate2Address } from '@ethersproject/address'
 
 import {
   BigintIsh,
-  FACTORY_ADDRESS,
   INIT_CODE_HASH,
   MINIMUM_LIQUIDITY,
   ZERO,
@@ -16,7 +15,8 @@ import {
   _985,
   _1000,
   ChainId
-} from '../constants'
+} from '../core'
+import { FACTORY_ADDRESS } from '../constants'
 import { sqrt, parseBigintIsh } from '../utils'
 import { InsufficientReservesError, InsufficientInputAmountError } from '../errors'
 import { Token } from './token'

@@ -1,6 +1,6 @@
 import invariant from 'tiny-invariant'
 
-import { ChainId, ONE, TradeType, ZERO } from '../constants'
+import { ChainId, ONE, TradeType, ZERO } from '../core'
 import { sortedInsert } from '../utils'
 import { Currency, DEV } from './currency'
 import { CurrencyAmount } from './fractions/currencyAmount'

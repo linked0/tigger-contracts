@@ -115,7 +115,7 @@ const config: HardhatUserConfig = {
             chainId: 12301,
             accounts: getAccounts(),
         },
-        marigoldlocalnet: {
+        marigold_localnet: {
             url: process.env.MARIGOLD_LOCALNET_URL || "",
             chainId: 12309,
             accounts: getAccounts(),

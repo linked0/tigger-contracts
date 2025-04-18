@@ -1,4 +1,4 @@
-import { TradeType } from './constants'
+import { TradeType } from './core'
 import invariant from 'tiny-invariant'
 import { validateAndParseAddress } from './utils'
 import { CurrencyAmount, DEV, Percent, Trade } from './entities'

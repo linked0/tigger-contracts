@@ -1,7 +1,7 @@
 {
   "name": "tigger-swap-sdk",
   "license": "MIT",
-  "version": "1.0.19",
+  "version": "1.0.22",
   "description": "A SDK for building applications on PooSwap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -16,9 +16,11 @@
   "module": "dist/sdk.esm.js",
   "scripts": {
     "lint": "tsdx lint src test",
+    "prebuild": "yarn generate:addresses",
     "build": "tsdx build",
     "start": "tsdx watch",
     "test": "tsdx test",
+    "generate:addresses": "tsx script/generate-addresses.ts",
     "prepublishOnly": "tsdx build",
     "get-weth:localnet":"yarn run tsx script/get-weth-localnet.ts",
     "get-weth:marigold:localnet":"yarn run tsx script/get-weth-marigold-localnet.ts"

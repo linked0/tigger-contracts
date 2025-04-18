@@ -1,6 +1,6 @@
 import JSBI from 'jsbi'
 
-import { SolidityType } from '../constants'
+import { SolidityType } from '../core'
 import { validateSolidityTypeInstance } from '../utils'
 
 /**

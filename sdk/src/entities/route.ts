@@ -1,4 +1,4 @@
-import { ChainId } from '../constants'
+import { ChainId } from '../core'
 import invariant from 'tiny-invariant'
 
 import { Currency, DEV } from './currency'

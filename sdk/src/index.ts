@@ -6,12 +6,11 @@ export {
   ChainId,
   TradeType,
   Rounding,
-  FACTORY_ADDRESS,
   INIT_CODE_HASH,
   MINIMUM_LIQUIDITY,
-  CONTRACT_ADDRESS_NETWORKS
-} from './constants'
+} from './core'
 
+export { FACTORY_ADDRESS, CONTRACT_ADDRESS_NETWORKS } from './constants'
 export * from './errors'
 export * from './entities'
 export * from './router'

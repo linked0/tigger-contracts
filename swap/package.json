@@ -16,10 +16,10 @@
     "deploy:localnet": "hardhat run --network localnet scripts/deploy-factory-poonet.js",
     "deploy:devnet": "ENV_FILE=.env.devnet hardhat run --network devnet scripts/deploy-factory-poonet.js",
     "deploy:marigold": "ENV_FILE=.env.marigold hardhat run --network marigold scripts/deploy-factory-marigold.js",
-    "deploy:marigold:localnet": "ENV_FILE=.env.marigold.localnet hardhat run --network marigoldlocalnet scripts/deploy-factory-marigold.js",
+    "deploy:marigold-localnet": "ENV_FILE=.env.marigold.localnet hardhat run --network marigold_localnet scripts/deploy-factory-marigold.js",
     "get-pair:localnet": "hardhat run --network localnet scripts/get-pair-poonet.js",
     "get-pair:devnet": "ENV_FILE=.env.devnet  hardhat run --network devnet scripts/get-pair-poonet.js",
-    "get-pair:marigold:localnet": "ENV_FILE=.env.marigold.localnet hardhat run --network marigoldlocalnet scripts/get-pair-marigold.js",
+    "get-pair:marigold-localnet": "ENV_FILE=.env.marigold.localnet hardhat run --network marigold_localnet scripts/get-pair-marigold.js",
     "fee:testnet": "hardhat run --network testnet scripts/get-fee-to.js"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"

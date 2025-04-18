@@ -5,7 +5,7 @@ import JSBI from 'jsbi'
 import _Big from 'big.js'
 import toFormat from 'toformat'
 
-import { BigintIsh, Rounding, TEN, SolidityType } from '../../constants'
+import { BigintIsh, Rounding, TEN, SolidityType } from '../../core'
 import { parseBigintIsh, validateSolidityTypeInstance } from '../../utils'
 import { Fraction } from './fraction'
 

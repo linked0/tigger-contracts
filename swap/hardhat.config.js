@@ -26,7 +26,7 @@ module.exports = {
          accounts: [process.env.ADMIN_KEY],
          chainId: parseInt(process.env.MARIGOLD_CHAIN_ID),
       },
-      marigoldlocalnet: {
+      marigold_localnet: {
          url: process.env.MARIGOLD_LOCALNET_URL,
          accounts: [process.env.ADMIN_KEY],
          chainId: parseInt(process.env.MARIGOLD_LOCALNET_CHAIN_ID),
